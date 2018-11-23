@@ -7,11 +7,7 @@
 //
 
 import UIKit
-extension UITabBarController{
-    override open func viewDidLoad() {
-        <#code#>
-    }
-}
+
 class OnBoardingViewController: UIViewController {
 
     override func viewDidLoad() {
