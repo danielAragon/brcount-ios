@@ -18,6 +18,8 @@
 		50691CC0218538C6008DEF45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50691CBE218538C6008DEF45 /* LaunchScreen.storyboard */; };
 		506D062121A83F2B004E32F2 /* CountingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506D062021A83F2B004E32F2 /* CountingItem.swift */; };
 		506D062521A8506F004E32F2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506D062421A8506F004E32F2 /* ProfileViewController.swift */; };
+		506D062821A85834004E32F2 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506D062721A85834004E32F2 /* OnBoardingViewController.swift */; };
+		506D062B21A858C2004E32F2 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506D062A21A858C2004E32F2 /* OnBoarding.swift */; };
 		5074DE322195DE9D005BFB27 /* SesionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074DE312195DE9C005BFB27 /* SesionesViewController.swift */; };
 		50F4F59121A5F8EA0078B939 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4F59021A5F8EA0078B939 /* Operator.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		50691CC1218538C6008DEF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		506D062021A83F2B004E32F2 /* CountingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingItem.swift; sourceTree = "<group>"; };
 		506D062421A8506F004E32F2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		506D062721A85834004E32F2 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		506D062A21A858C2004E32F2 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
 		5074DE312195DE9C005BFB27 /* SesionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionesViewController.swift; sourceTree = "<group>"; };
 		50F4F59021A5F8EA0078B939 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +69,7 @@
 				505BD54221973D1200E228EA /* Session.swift */,
 				50F4F59021A5F8EA0078B939 /* Operator.swift */,
 				506D062021A83F2B004E32F2 /* CountingItem.swift */,
+				506D062A21A858C2004E32F2 /* OnBoarding.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,9 +130,26 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		506D062621A85811004E32F2 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				506D062721A85834004E32F2 /* OnBoardingViewController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		506D062921A858AF004E32F2 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		5074DE2B218E5754005BFB27 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				506D062921A858AF004E32F2 /* Welcome */,
+				506D062621A85811004E32F2 /* OnBoarding */,
 				506D062321A85060004E32F2 /* Profile */,
 				505BD5482198F05C00E228EA /* Reporte */,
 				5074DE302195DADA005BFB27 /* Conteo */,
@@ -233,6 +255,8 @@
 				505BD54321973D1200E228EA /* Session.swift in Sources */,
 				505BD54A2198F06D00E228EA /* ReporteViewController.swift in Sources */,
 				505BD5472198E4E900E228EA /* ConteoViewController.swift in Sources */,
+				506D062B21A858C2004E32F2 /* OnBoarding.swift in Sources */,
+				506D062821A85834004E32F2 /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
