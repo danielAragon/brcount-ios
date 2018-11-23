@@ -13,43 +13,81 @@ class SesionCell: UITableViewCell{
     @IBOutlet weak var junctionLabel: UILabel!
     @IBOutlet weak var hourLabel: UILabel!
 }
+
 class SesionesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    var sessions: [Session]?
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
     }
+    
     func initialSetup(){
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        sesiones = [
-            Sesion(dia: "7 de Mayo", lugar: "Av Tupac Amaru con\n Av Salaverry", hora: "7:00 - 9:00", active: true),
-            Sesion(dia: "9 de Junio", lugar: "Av Pershing con\n Av Ricardo Palma", hora: "7:00 - 9:00", active: true)]
-    }
-    struct Sesion{
-        var dia: String
-        var lugar: String
-        var hora: String
-        var active: Bool
+        BetterRideApi.getSessions(operatorId: 4, status: .pendiente, responseHandler: handler)
     }
     
-    var sesiones: [Sesion]?
+    func handler(data: SessionResponse){
+        sessions = data.sessions!
+        tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let row = (tableView.indexPathForSelectedRow?.row)!
+        if segue.identifier == "showCounting" {
+            if let vc = segue.destination as? ConteoViewController {
+                let session = sessions![row]
+                let junction = "\(session.avenue_first ?? "") con \n\(session.avenue_second ?? "")"
+                vc.sessionId = sessions![row].id
+                vc.junction = junction
+                vc.timeStart = String((session.started_at?.prefix(5))!)
+                vc.timeFinish = String((session.finished_at?.prefix(5))!)
+            }
+        } else if segue.identifier == "showReporting" {
+//            if let vc = segue.destination as? ReporteViewController {
+//                vc. = ""
+//            }
+        }
+    }
+
+    @IBAction func segmentChanged(_ sender: Any) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            BetterRideApi.getSessions(operatorId: 4, status: .pendiente, responseHandler: handler)
+        case 1:
+            BetterRideApi.getSessions(operatorId: 4, status: .realizado, responseHandler: handler)
+        default:
+            break
+        }
+    }
+    
 }
 extension SesionesViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sesiones!.count
+        return sessions?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SesionCell", for: indexPath) as! SesionCell
-        cell.dayLabel.text = sesiones![indexPath.row].dia
-        cell.hourLabel.text = sesiones![indexPath.row].lugar
-        cell.dayLabel.text = sesiones![indexPath.row].hora
+        let session = sessions![indexPath.row]
+        let junction = "\(session.avenue_first ?? "") con \n\(session.avenue_second ?? "")"
+        let schedule = "\(session.started_at?.prefix(5) ?? "") - \(session.finished_at?.prefix(5) ?? "")"
+        
+        cell.dayLabel.text = session.date
+        cell.junctionLabel.text = junction
+        cell.hourLabel.text = schedule
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "showCounting", sender: nil)
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            self.performSegue(withIdentifier: "showCounting", sender: nil)
+        case 1:
+            self.performSegue(withIdentifier: "showReporting", sender: nil)
+        default:
+            break
+        }
     }
     
 }

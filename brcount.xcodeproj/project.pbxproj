@@ -7,25 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505BD53D2197263900E228EA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BD53C2197263900E228EA /* API.swift */; };
+		505BD54321973D1200E228EA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BD54221973D1200E228EA /* Session.swift */; };
+		505BD5472198E4E900E228EA /* ConteoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BD5462198E4E900E228EA /* ConteoViewController.swift */; };
+		505BD54A2198F06D00E228EA /* ReporteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BD5492198F06D00E228EA /* ReporteViewController.swift */; };
 		506490C021874F4B00BCA65D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506490BF21874F4B00BCA65D /* Utils.swift */; };
 		506490C621875D7400BCA65D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 506490C521875D7400BCA65D /* Assets.xcassets */; };
 		50691CB6218538C2008DEF45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50691CB5218538C2008DEF45 /* AppDelegate.swift */; };
-		50691CB8218538C2008DEF45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50691CB7218538C2008DEF45 /* ViewController.swift */; };
 		50691CBB218538C2008DEF45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50691CB9218538C2008DEF45 /* Main.storyboard */; };
 		50691CC0218538C6008DEF45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50691CBE218538C6008DEF45 /* LaunchScreen.storyboard */; };
+		506D062121A83F2B004E32F2 /* CountingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506D062021A83F2B004E32F2 /* CountingItem.swift */; };
+		506D062521A8506F004E32F2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506D062421A8506F004E32F2 /* ProfileViewController.swift */; };
 		5074DE322195DE9D005BFB27 /* SesionesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5074DE312195DE9C005BFB27 /* SesionesViewController.swift */; };
+		50F4F59121A5F8EA0078B939 /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4F59021A5F8EA0078B939 /* Operator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		505BD53C2197263900E228EA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		505BD54221973D1200E228EA /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		505BD5462198E4E900E228EA /* ConteoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConteoViewController.swift; sourceTree = "<group>"; };
+		505BD5492198F06D00E228EA /* ReporteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReporteViewController.swift; sourceTree = "<group>"; };
 		506490BF21874F4B00BCA65D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		506490C521875D7400BCA65D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50691CB2218538C2008DEF45 /* brcount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brcount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50691CB5218538C2008DEF45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50691CB7218538C2008DEF45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		50691CBA218538C2008DEF45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50691CBF218538C6008DEF45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50691CC1218538C6008DEF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		506D062021A83F2B004E32F2 /* CountingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountingItem.swift; sourceTree = "<group>"; };
+		506D062421A8506F004E32F2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5074DE312195DE9C005BFB27 /* SesionesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SesionesViewController.swift; sourceTree = "<group>"; };
+		50F4F59021A5F8EA0078B939 /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		505BD540219728CD00E228EA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				505BD53C2197263900E228EA /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		505BD54121973D0000E228EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				505BD54221973D1200E228EA /* Session.swift */,
+				50F4F59021A5F8EA0078B939 /* Operator.swift */,
+				506D062021A83F2B004E32F2 /* CountingItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		505BD5482198F05C00E228EA /* Reporte */ = {
+			isa = PBXGroup;
+			children = (
+				505BD5492198F06D00E228EA /* ReporteViewController.swift */,
+			);
+			path = Reporte;
+			sourceTree = "<group>";
+		};
 		506490BE21874F2200BCA65D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +104,11 @@
 		50691CB4218538C2008DEF45 /* brcount */ = {
 			isa = PBXGroup;
 			children = (
+				505BD54121973D0000E228EA /* Models */,
+				505BD540219728CD00E228EA /* Network */,
 				5074DE2B218E5754005BFB27 /* Scenes */,
 				506490BE21874F2200BCA65D /* Utils */,
 				50691CB5218538C2008DEF45 /* AppDelegate.swift */,
-				50691CB7218538C2008DEF45 /* ViewController.swift */,
 				50691CB9218538C2008DEF45 /* Main.storyboard */,
 				506490C521875D7400BCA65D /* Assets.xcassets */,
 				50691CBE218538C6008DEF45 /* LaunchScreen.storyboard */,
@@ -78,9 +117,19 @@
 			path = brcount;
 			sourceTree = "<group>";
 		};
+		506D062321A85060004E32F2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				506D062421A8506F004E32F2 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		5074DE2B218E5754005BFB27 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				506D062321A85060004E32F2 /* Profile */,
+				505BD5482198F05C00E228EA /* Reporte */,
 				5074DE302195DADA005BFB27 /* Conteo */,
 				5074DE2F2195D973005BFB27 /* Sesiones */,
 			);
@@ -98,6 +147,7 @@
 		5074DE302195DADA005BFB27 /* Conteo */ = {
 			isa = PBXGroup;
 			children = (
+				505BD5462198E4E900E228EA /* ConteoViewController.swift */,
 			);
 			path = Conteo;
 			sourceTree = "<group>";
@@ -173,10 +223,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50691CB8218538C2008DEF45 /* ViewController.swift in Sources */,
+				505BD53D2197263900E228EA /* API.swift in Sources */,
 				50691CB6218538C2008DEF45 /* AppDelegate.swift in Sources */,
+				506D062521A8506F004E32F2 /* ProfileViewController.swift in Sources */,
 				506490C021874F4B00BCA65D /* Utils.swift in Sources */,
 				5074DE322195DE9D005BFB27 /* SesionesViewController.swift in Sources */,
+				50F4F59121A5F8EA0078B939 /* Operator.swift in Sources */,
+				506D062121A83F2B004E32F2 /* CountingItem.swift in Sources */,
+				505BD54321973D1200E228EA /* Session.swift in Sources */,
+				505BD54A2198F06D00E228EA /* ReporteViewController.swift in Sources */,
+				505BD5472198E4E900E228EA /* ConteoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
